@@ -76,6 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4925AEE328EFBB5D00038908 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				494C919328EE555600CD747B /* ViewController.swift */,
+				494C919528EE555600CD747B /* Main.storyboard */,
+				494C919A28EE555800CD747B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4925AEE428EFBB6500038908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4925AEE528EFBB6F00038908 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		494C918328EE555600CD747B = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +123,12 @@
 		494C918E28EE555600CD747B /* cinema-app */ = {
 			isa = PBXGroup;
 			children = (
+				4925AEE528EFBB6F00038908 /* ViewModel */,
+				4925AEE428EFBB6500038908 /* Model */,
+				4925AEE328EFBB5D00038908 /* View */,
 				494C918F28EE555600CD747B /* AppDelegate.swift */,
 				494C919128EE555600CD747B /* SceneDelegate.swift */,
-				494C919328EE555600CD747B /* ViewController.swift */,
-				494C919528EE555600CD747B /* Main.storyboard */,
 				494C919828EE555800CD747B /* Assets.xcassets */,
-				494C919A28EE555800CD747B /* LaunchScreen.storyboard */,
 				494C919D28EE555800CD747B /* Info.plist */,
 			);
 			path = "cinema-app";
