@@ -79,9 +79,8 @@
 		4925AEE328EFBB5D00038908 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4925AEE628EFBEB500038908 /* Storyboard */,
 				494C919328EE555600CD747B /* ViewController.swift */,
-				494C919528EE555600CD747B /* Main.storyboard */,
-				494C919A28EE555800CD747B /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,6 +97,33 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4925AEE628EFBEB500038908 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				494C919528EE555600CD747B /* Main.storyboard */,
+				494C919A28EE555800CD747B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4925AEE728EFBECF00038908 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				494C918F28EE555600CD747B /* AppDelegate.swift */,
+				494C919128EE555600CD747B /* SceneDelegate.swift */,
+				494C919828EE555800CD747B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4925AEE828EFBEF100038908 /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				494C919D28EE555800CD747B /* Info.plist */,
+			);
+			path = Supportings;
 			sourceTree = "<group>";
 		};
 		494C918328EE555600CD747B = {
@@ -123,13 +149,11 @@
 		494C918E28EE555600CD747B /* cinema-app */ = {
 			isa = PBXGroup;
 			children = (
+				4925AEE828EFBEF100038908 /* Supportings */,
+				4925AEE728EFBECF00038908 /* Resources */,
 				4925AEE528EFBB6F00038908 /* ViewModel */,
 				4925AEE428EFBB6500038908 /* Model */,
 				4925AEE328EFBB5D00038908 /* View */,
-				494C918F28EE555600CD747B /* AppDelegate.swift */,
-				494C919128EE555600CD747B /* SceneDelegate.swift */,
-				494C919828EE555800CD747B /* Assets.xcassets */,
-				494C919D28EE555800CD747B /* Info.plist */,
 			);
 			path = "cinema-app";
 			sourceTree = "<group>";
