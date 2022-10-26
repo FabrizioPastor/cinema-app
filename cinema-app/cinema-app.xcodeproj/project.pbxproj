@@ -77,6 +77,7 @@
 		4925AEE328EFBB5D00038908 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49E873D72908EE9A00233AB4 /* Elements */,
 				4925AEE628EFBEB500038908 /* Storyboard */,
 				494C919328EE555600CD747B /* HomeViewController.swift */,
 			);
@@ -162,6 +163,13 @@
 				494C91B228EE555900CD747B /* cinema_appUITestsLaunchTests.swift */,
 			);
 			path = "cinema-appUITests";
+			sourceTree = "<group>";
+		};
+		49E873D72908EE9A00233AB4 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
