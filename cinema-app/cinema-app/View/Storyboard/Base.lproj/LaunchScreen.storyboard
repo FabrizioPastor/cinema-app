@@ -16,26 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-backgorund" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-l0-XYU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-backgorund" translatesAutoresizingMaskIntoConstraints="NO" id="F7g-9E-SCp">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e-movie-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Jyr-he-ktm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e-movie-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-n4-gmj">
                                 <rect key="frame" x="145" y="397" width="100" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="73r-bB-61f"/>
-                                    <constraint firstAttribute="height" constant="50" id="Ktg-qk-Xkn"/>
+                                    <constraint firstAttribute="width" constant="100" id="AeG-XA-nu5"/>
+                                    <constraint firstAttribute="height" constant="50" id="Fg8-nT-NnC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="L1T-l0-XYU" secondAttribute="trailing" id="4VQ-IC-I8Z"/>
-                            <constraint firstItem="L1T-l0-XYU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ra1-9g-nXf"/>
-                            <constraint firstItem="Jyr-he-ktm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cQl-Xx-meF"/>
-                            <constraint firstItem="L1T-l0-XYU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fd0-ZP-VyL"/>
-                            <constraint firstAttribute="bottom" secondItem="L1T-l0-XYU" secondAttribute="bottom" id="uGN-m1-8ij"/>
-                            <constraint firstItem="Jyr-he-ktm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="z5t-8J-ehY"/>
+                            <constraint firstItem="nlj-n4-gmj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GL0-jI-giK"/>
+                            <constraint firstItem="F7g-9E-SCp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="HgU-1K-2b9"/>
+                            <constraint firstAttribute="bottom" secondItem="F7g-9E-SCp" secondAttribute="bottom" id="SoK-Ep-BzX"/>
+                            <constraint firstItem="F7g-9E-SCp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Uqv-dF-bBa"/>
+                            <constraint firstAttribute="trailing" secondItem="F7g-9E-SCp" secondAttribute="trailing" id="bg8-Yu-ZIp"/>
+                            <constraint firstItem="nlj-n4-gmj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tOl-2U-RQM"/>
                         </constraints>
                     </view>
                 </viewController>
