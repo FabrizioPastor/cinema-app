@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		494C919028EE555600CD747B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C918F28EE555600CD747B /* AppDelegate.swift */; };
 		494C919228EE555600CD747B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C919128EE555600CD747B /* SceneDelegate.swift */; };
-		494C919428EE555600CD747B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C919328EE555600CD747B /* ViewController.swift */; };
+		494C919428EE555600CD747B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C919328EE555600CD747B /* HomeViewController.swift */; };
 		494C919928EE555800CD747B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494C919828EE555800CD747B /* Assets.xcassets */; };
 		494C919C28EE555800CD747B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494C919A28EE555800CD747B /* LaunchScreen.storyboard */; };
 		494C91A728EE555900CD747B /* cinema_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C91A628EE555900CD747B /* cinema_appTests.swift */; };
@@ -38,7 +38,7 @@
 		494C918C28EE555600CD747B /* cinema-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinema-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494C918F28EE555600CD747B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494C919128EE555600CD747B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		494C919328EE555600CD747B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		494C919328EE555600CD747B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		494C919828EE555800CD747B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494C919B28EE555800CD747B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494C919D28EE555800CD747B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4925AEE628EFBEB500038908 /* Storyboard */,
-				494C919328EE555600CD747B /* ViewController.swift */,
+				494C919328EE555600CD747B /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,11 +138,11 @@
 		494C918E28EE555600CD747B /* cinema-app */ = {
 			isa = PBXGroup;
 			children = (
-				494C919D28EE555800CD747B /* Info.plist */,
-				4925AEE728EFBECF00038908 /* Resources */,
-				4925AEE528EFBB6F00038908 /* ViewModel */,
 				4925AEE428EFBB6500038908 /* Model */,
 				4925AEE328EFBB5D00038908 /* View */,
+				4925AEE528EFBB6F00038908 /* ViewModel */,
+				4925AEE728EFBECF00038908 /* Resources */,
+				494C919D28EE555800CD747B /* Info.plist */,
 			);
 			path = "cinema-app";
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494C919428EE555600CD747B /* ViewController.swift in Sources */,
+				494C919428EE555600CD747B /* HomeViewController.swift in Sources */,
 				494C919028EE555600CD747B /* AppDelegate.swift in Sources */,
 				494C919228EE555600CD747B /* SceneDelegate.swift in Sources */,
 			);

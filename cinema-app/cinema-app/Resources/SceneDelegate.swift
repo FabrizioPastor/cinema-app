@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windosScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windosScene.coordinateSpace.bounds)
         window?.windowScene = windosScene //ESTO NO SE PARA QUÉ ES JAJAJA
-        window?.rootViewController = ViewController() //SETEO EL CONTROLADOR
+        window?.rootViewController = HomeViewController() //SETEO EL CONTROLADOR
         window?.makeKeyAndVisible() //HAGO VISIBLE LA VENTANA
     }
 
