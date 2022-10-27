@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     
     private let moviesTable: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return tableView
     }()
     
@@ -26,7 +26,12 @@ class HomeViewController: UIViewController {
         moviesTable.delegate = self
         moviesTable.dataSource = self
         
+        let uiView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        let customView = FooterView()
+        customView.frame = uiView.bounds /* add your frame */
+        uiView.addSubview(customView)
         
+        moviesTable.tableFooterView = uiView
     }
 
     //EVENTO QUE SE EJECUTA AL MOMENTO QUE SE AGREGAN SUBVIEWS
@@ -51,8 +56,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "My text"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
+        
         return cell
     }
     
