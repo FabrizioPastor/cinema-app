@@ -69,8 +69,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 40
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionsTitle[section]
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label: UILabel = UILabel(frame: view.frame)
+        label.textColor = UIColor.white
+        label.text = sectionsTitle[section]
+        label.font = UIFont(name: "Helvetica Neue Bold", size: 25)
+
+        return label
     }
     
 }
