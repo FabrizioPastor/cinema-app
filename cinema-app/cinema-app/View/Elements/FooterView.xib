@@ -18,9 +18,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-ib-4O3" customClass="DesignableButton" customModule="cinema_app" customModuleProvider="target">
-                    <rect key="frame" x="25" y="68" width="108" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-ib-4O3" customClass="DesignableButton" customModule="cinema_app" customModuleProvider="target">
+                    <rect key="frame" x="25" y="67" width="108" height="35"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="En Español"/>
@@ -36,9 +35,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spL-Qt-zha" customClass="DesignableButton" customModule="cinema_app" customModuleProvider="target">
-                    <rect key="frame" x="157" y="67" width="164" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spL-Qt-zha" customClass="DesignableButton" customModule="cinema_app" customModuleProvider="target">
+                    <rect key="frame" x="158" y="67" width="164" height="35"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Lanzados en 1993"/>
@@ -54,9 +52,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-LY-mhA">
-                    <rect key="frame" x="25" y="134" width="317" height="376"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-LY-mhA">
+                    <rect key="frame" x="25" y="132" width="308" height="378"/>
                     <color key="backgroundColor" red="0.81494420810000001" green="0.97866415389999994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G8N-Jz-M7U">
                         <size key="itemSize" width="128" height="128"/>
@@ -68,7 +65,15 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="6LO-ib-4O3" firstAttribute="top" secondItem="rSK-Z7-z5Y" secondAttribute="bottom" constant="17" id="Bua-Fg-Gp5"/>
                 <constraint firstItem="rSK-Z7-z5Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="QC2-XU-nDA"/>
+                <constraint firstItem="spL-Qt-zha" firstAttribute="leading" secondItem="6LO-ib-4O3" secondAttribute="trailing" constant="25" id="Qdj-g8-ah9"/>
+                <constraint firstAttribute="trailing" secondItem="yS2-LY-mhA" secondAttribute="trailing" constant="25" id="SvX-00-eC5"/>
+                <constraint firstAttribute="bottom" secondItem="yS2-LY-mhA" secondAttribute="bottom" constant="20" id="Uxr-xL-LP5"/>
+                <constraint firstItem="spL-Qt-zha" firstAttribute="top" secondItem="rSK-Z7-z5Y" secondAttribute="bottom" constant="17" id="WWz-Oe-3m6"/>
+                <constraint firstItem="6LO-ib-4O3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="gCX-2t-wXo"/>
+                <constraint firstItem="yS2-LY-mhA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="pja-Jl-yvL"/>
+                <constraint firstItem="yS2-LY-mhA" firstAttribute="top" secondItem="6LO-ib-4O3" secondAttribute="bottom" constant="30" id="vER-oq-a1a"/>
                 <constraint firstItem="rSK-Z7-z5Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="vmk-r6-qZc"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
