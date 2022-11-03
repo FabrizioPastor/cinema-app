@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         moviesTable.dataSource = self
         
         let uiView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 700))
-        let customView = FooterView()
+        let customView = ForYouFooterView()
         customView.frame = uiView.bounds /* add your frame */
         uiView.addSubview(customView)
         

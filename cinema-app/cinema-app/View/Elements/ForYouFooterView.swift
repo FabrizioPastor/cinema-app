@@ -8,7 +8,7 @@
 import UIKit
 
 
-class FooterView: UIView {
+class ForYouFooterView: UIView {
     
     private let footerCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -60,7 +60,7 @@ class FooterView: UIView {
     }
 }
 
-extension FooterView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ForYouFooterView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "footerCell", for: indexPath)
