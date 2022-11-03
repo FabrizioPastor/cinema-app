@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-backgorund" translatesAutoresizingMaskIntoConstraints="NO" id="F7g-9E-SCp">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash-backgorund" translatesAutoresizingMaskIntoConstraints="NO" id="F7g-9E-SCp">
+                                <rect key="frame" x="-38" y="-26" width="459" height="892"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e-movie-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-n4-gmj">
                                 <rect key="frame" x="145" y="397" width="100" height="50"/>
@@ -31,10 +32,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nlj-n4-gmj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GL0-jI-giK"/>
-                            <constraint firstItem="F7g-9E-SCp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="HgU-1K-2b9"/>
-                            <constraint firstAttribute="bottom" secondItem="F7g-9E-SCp" secondAttribute="bottom" id="SoK-Ep-BzX"/>
-                            <constraint firstItem="F7g-9E-SCp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Uqv-dF-bBa"/>
-                            <constraint firstAttribute="trailing" secondItem="F7g-9E-SCp" secondAttribute="trailing" id="bg8-Yu-ZIp"/>
                             <constraint firstItem="nlj-n4-gmj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tOl-2U-RQM"/>
                         </constraints>
                     </view>

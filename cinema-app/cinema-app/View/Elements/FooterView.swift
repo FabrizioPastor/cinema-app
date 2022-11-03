@@ -20,12 +20,13 @@ class FooterView: UIView {
     }()
     
     @IBOutlet weak var footerViewCollectionView: UIView!
+    @IBOutlet var principalView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         configureView()
-        //footerViewCollectionView.backgroundColor = .red
-        //footerCollectionView.backgroundColor = .blue
+        
         footerCollectionView.frame = footerViewCollectionView.bounds
         footerViewCollectionView.addSubview(footerCollectionView)
         
@@ -35,15 +36,27 @@ class FooterView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
         configureView()
+        
         footerCollectionView.frame = footerViewCollectionView.bounds
         footerViewCollectionView.addSubview(footerCollectionView)
+        
+        footerCollectionView.delegate = self
+        footerCollectionView.dataSource = self
     }
     
     private func configureView(){
         guard let view = loadViewFromNib(nibName: "FooterView") else {return}
         view.frame = bounds
         addSubview(view)
+        
+        //ESTE FRAGMENTO HACE EXACTAMENTE LO MISMO, SOLO QUE APOYANDOSE EN EL INSPECTOR DEL XIB PARA ENLAZAR MEDIANTE OULET LA VIEW CON EL CONTROLADOR
+        /*
+         Bundle.main.loadNibNamed("FooterView", owner: self)
+         principalView.frame = bounds
+         addSubview(principalView)
+         */
     }
 }
 
