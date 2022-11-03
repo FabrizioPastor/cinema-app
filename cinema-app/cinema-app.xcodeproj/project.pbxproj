@@ -104,13 +104,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		4908F7AA291475A600C1E85E /* Resources */ = {
+		4908F7AA291475A600C1E85E /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				4908F7A72914746D00C1E85E /* Networking */,
 				4908F7AB291475D200C1E85E /* APIKeyable.swift */,
+				49E873DE2908FC1E00233AB4 /* UIViewExtension.swift */,
 			);
-			path = Resources;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		4925AEE328EFBB5D00038908 /* View */ = {
@@ -126,7 +127,7 @@
 		4925AEE428EFBB6500038908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4908F7AA291475A600C1E85E /* Resources */,
+				4908F7AA291475A600C1E85E /* Common */,
 				4908F7B129147B8800C1E85E /* CategoryResponse.swift */,
 			);
 			path = Model;
@@ -185,7 +186,6 @@
 				4925AEE528EFBB6F00038908 /* ViewModel */,
 				4925AEE728EFBECF00038908 /* Resources */,
 				494C919D28EE555800CD747B /* Info.plist */,
-				49E873DE2908FC1E00233AB4 /* UIViewExtension.swift */,
 				4908F7AD2914763300C1E85E /* PROD-Keys.plist */,
 				4908F7AF2914764B00C1E85E /* DEBUG-Keys.plist */,
 			);
