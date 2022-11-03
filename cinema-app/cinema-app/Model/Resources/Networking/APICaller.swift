@@ -11,20 +11,6 @@ struct APICaller {
     
     static let shared = APICaller()
     
-    private struct Constants {
-        static let baseURL = "https://api.themoviedb.org"
-    }
-    
-    enum APIError: Error {
-    case failedTogetData
-    }
-    
-    enum categoryEnum: Int {
-        case trendingMovies = 0
-        case upcomingMovies = 1
-        case topRated = 2
-    }
-    
     //MARK: - Métodos de clase
     func getDataFrom (category: categoryEnum, completion: @escaping (Result<[CategoryBody], Error>) -> Void) {
         guard let url = URL(string: prepareURLByCategory(category)) else {return}
@@ -55,5 +41,21 @@ struct APICaller {
         case .topRated:
             return "\(Constants.baseURL)/3/movie/top_rated?api_key=\(ENV.SERVICE_API_KEY)"
         }
+    }
+}
+
+extension APICaller {
+    private struct Constants {
+        static let baseURL = "https://api.themoviedb.org"
+    }
+    
+    enum APIError: Error {
+    case failedTogetData
+    }
+    
+    enum categoryEnum: Int {
+        case trendingMovies = 0
+        case upcomingMovies = 1
+        case topRated = 2
     }
 }
