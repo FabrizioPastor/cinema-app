@@ -45,8 +45,9 @@ struct APICaller {
 }
 
 extension APICaller {
-    private struct Constants {
+    struct Constants {
         static let baseURL = "https://api.themoviedb.org"
+        static let imageBaseURL = "https://image.tmdb.org/t/p/w500"
     }
     
     enum APIError: Error {
