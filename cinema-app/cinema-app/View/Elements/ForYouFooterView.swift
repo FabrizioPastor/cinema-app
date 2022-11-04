@@ -10,12 +10,14 @@ import UIKit
 
 class ForYouFooterView: UIView {
     
+    private var titles: [CategoryBody] = [CategoryBody]()
+    
     private let footerCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 138, height: 180)
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "footerCell")
+        collectionView.register(CoverCollectionViewCell.self, forCellWithReuseIdentifier: CoverCollectionViewCell.identifier)
         return collectionView
     }()
     
@@ -24,7 +26,8 @@ class ForYouFooterView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
+        configure()
         configureView()
         
         footerCollectionView.frame = footerViewCollectionView.bounds
@@ -58,13 +61,34 @@ class ForYouFooterView: UIView {
          addSubview(principalView)
          */
     }
+    
+    public func configure(){
+        APICaller.shared.getDataFrom(category: .topRated) { results in
+            switch results {
+            case .success(let titles):
+                self.titles = titles
+                DispatchQueue.main.async { [weak self] in
+                    self?.footerCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
 }
 
 extension ForYouFooterView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "footerCell", for: indexPath)
-        cell.backgroundColor = .red
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CoverCollectionViewCell.identifier, for: indexPath) as? CoverCollectionViewCell else { return UICollectionViewCell() }
+        
+        if titles.isEmpty {
+            return cell
+        }
+        
+        guard let model = titles[indexPath.row].poster_path else { return UICollectionViewCell() }
+        cell.configure(with: model)
         return cell
     }
     

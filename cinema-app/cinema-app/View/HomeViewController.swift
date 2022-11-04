@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         let uiView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 700))
         let customView = ForYouFooterView()
         customView.frame = uiView.bounds /* add your frame */
+                
         uiView.addSubview(customView)
         
         moviesTable.tableFooterView = uiView
@@ -40,7 +41,7 @@ class HomeViewController: UIViewController {
         //INSERTAR UN TABLEVIEW QUE OCUPA TODO EL ESPACIO DEL HOME VIEW
         moviesTable.frame = view.bounds
     }
-
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -57,6 +58,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
+        
+        var categoria: APICaller.categoryEnum?
+        
+        switch indexPath.section {
+        case APICaller.categoryEnum.trendingMovies.rawValue:
+            categoria = .trendingMovies
+        case APICaller.categoryEnum.upcomingMovies.rawValue:
+            categoria = .upcomingMovies
+        case APICaller.categoryEnum.topRated.rawValue:
+            categoria = .topRated
+        default:
+            break
+        }
+        
+        guard let categoria = categoria else { return cell }
+        
+        APICaller.shared.getDataFrom(category: categoria) { results in
+            switch results {
+            case .success(let titles):
+                cell.configure(with: titles)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
         return cell
     }
