@@ -15,9 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windosScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windosScene.coordinateSpace.bounds)
-        window?.windowScene = windosScene //ESTO NO SE PARA QUÉ ES JAJAJA
-        window?.rootViewController = HomeViewController() //SETEO EL CONTROLADOR
-        window?.makeKeyAndVisible() //HAGO VISIBLE LA VENTANA
+        window?.windowScene = windosScene
+        let router = HomeRouter()
+        let navController = UINavigationController(rootViewController: router.viewController)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

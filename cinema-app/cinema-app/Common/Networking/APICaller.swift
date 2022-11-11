@@ -12,7 +12,7 @@ struct APICaller {
     static let shared = APICaller()
     
     //MARK: - Métodos de clase
-    func getDataFrom (category: categoryEnum, completion: @escaping (Result<[CategoryBody], Error>) -> Void) {
+    func getDataFrom (category: categoryEnum, completion: @escaping (Result<[Movie], Error>) -> Void) {
         guard let url = URL(string: prepareURLByCategory(category)) else {return}
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
@@ -20,7 +20,7 @@ struct APICaller {
             
             do {
                 //let results = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-                let results = try JSONDecoder().decode(CategoryResponse.self, from: data)
+                let results = try JSONDecoder().decode(Movies.self, from: data)
                 completion(.success(results.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))

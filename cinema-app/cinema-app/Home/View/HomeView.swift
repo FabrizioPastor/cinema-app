@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeView: UIViewController {
 
+    //MARK: - Atributos
     private let sectionsTitle = ["Próximos estrenos", "Tendencia", "Recomendados para ti"]
     
     private let moviesTable: UITableView = {
@@ -17,10 +18,12 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
+    //MARK: - Métodos de clase
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .systemYellow
+        
+        configureView()
+        
         view.addSubview(moviesTable)
         
         moviesTable.delegate = self
@@ -42,9 +45,18 @@ class HomeViewController: UIViewController {
         moviesTable.frame = view.bounds
     }
     
+    //MARK: - Métodos de usuario
+    private func configureView() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "e-movie-icon")
+        imageView.image = image
+        navigationItem.titleView = imageView
+    }
+    
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - METODOS DE UITableViewDelegate
     func numberOfSections(in tableView: UITableView) -> Int {

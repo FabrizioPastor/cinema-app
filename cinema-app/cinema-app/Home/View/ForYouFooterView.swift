@@ -10,7 +10,7 @@ import UIKit
 
 class ForYouFooterView: UIView {
     
-    private var titles: [CategoryBody] = [CategoryBody]()
+    private var titles: [Movie] = [Movie]()
     
     private let footerCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
