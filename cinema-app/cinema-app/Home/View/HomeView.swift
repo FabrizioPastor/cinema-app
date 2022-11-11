@@ -18,12 +18,16 @@ class HomeView: UIViewController {
         return tableView
     }()
     
+    private var router = HomeRouter()
+    private var viewModel = HomeViewModel()
+    
     //MARK: - Métodos de clase
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureView()
+        viewModel.bind(router: router, view: self)
         
+        configureView()
         view.addSubview(moviesTable)
         
         moviesTable.delegate = self
@@ -31,17 +35,13 @@ class HomeView: UIViewController {
         
         let uiView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 700))
         let customView = ForYouFooterView()
-        customView.frame = uiView.bounds /* add your frame */
-                
+        customView.frame = uiView.bounds
         uiView.addSubview(customView)
-        
         moviesTable.tableFooterView = uiView
     }
 
-    //EVENTO QUE SE EJECUTA AL MOMENTO QUE SE AGREGAN SUBVIEWS
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //INSERTAR UN TABLEVIEW QUE OCUPA TODO EL ESPACIO DEL HOME VIEW
         moviesTable.frame = view.bounds
     }
     

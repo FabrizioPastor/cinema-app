@@ -10,7 +10,7 @@ import Foundation
 class HomeViewModel {
     
     var router: HomeRouter?
-    var view: HomeView?
+    weak var view: HomeView?
     
     func bind (router: HomeRouter, view: HomeView) {
         self.view = view
@@ -19,4 +19,7 @@ class HomeViewModel {
         self.router?.setSourceView(view: view)
     }
     
+    func navigateToDetail() {
+        
+    }
 }
